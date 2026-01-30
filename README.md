@@ -52,7 +52,6 @@ http://localhost:3000
 - Layout conforme Figma	✅	Pixel perfect
 - Modal de produto	✅	Completo com informações
 - Pré-processador CSS	✅	SCSS em todos os componentes
-- Sem bibliotecas UI	✅	Estilização com CSS puro / SCSS
 - SEO	✅	HTML semântico e meta tags
 - Componentização	✅	Estrutura modular
 
