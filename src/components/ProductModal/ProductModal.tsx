@@ -2,6 +2,7 @@
 import './ProductModal.scss';
 import { Product } from '../../types/Product';
 
+
 import { 
   FiX, 
   FiShoppingCart, 
