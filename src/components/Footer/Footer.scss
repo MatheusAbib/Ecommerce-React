@@ -1,38 +1,34 @@
+@import '../../styles/variables';
+
 .footer {
   background-color: #f4f4f4;
   width: 100%;
 }
 
-.container {
-  max-width: 1600px; 
-  margin: 0 auto;
-  padding: 0 47px; 
-}
-
+.container,
 .container-footer {
-  max-width: 1600px; 
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 47px; 
+  padding: 0 $container-padding-xl;
 }
 
 .footer-main {
-  padding: 60px 0;
+  padding: $gap-xxxxxxl 0;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 80px; 
+  gap: 80px;
 }
 
 .footer-brand {
   flex: 1;
   min-width: 300px;
   max-width: 354px;
-
-  padding-right: 40px;
-  margin-right: 40px;
+  padding-right: $gap-xxxxl;
+  margin-right: $gap-xxxxl;
   position: relative;
 }
 
@@ -47,15 +43,14 @@
   opacity: 18%;
 }
 
-
 .brand-description {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-primary;
   font-weight: 300;
-  font-size: 14px;
-  color: #3f3f40;
+  font-size: $font-size-lg;
+  color: $color-dark-gray;
   line-height: 1.6;
-  margin-bottom: 27px;
-  margin-top: 18px;
+  margin-bottom: $gap-xxxxxl;
+  margin-top: $gap-xxxxl;
 }
 
 .social-links {
@@ -64,26 +59,25 @@
 }
 
 .social-link {
-  border-radius: 4px;
+  border-radius: $gap-xs;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all $transition-speed ease;
 }
 
 .social-link:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  background-color: #f7ca11;
+  box-shadow: 0 $gap-xs $gap-md rgba(0, 0, 0, 0.15);
+  background-color: $color-accent;
 }
-
 
 .footer-links-grid {
   flex: 2 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px; 
+  gap: 100px;
   min-width: 300px;
 }
 
@@ -93,11 +87,11 @@
 }
 
 .column-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-primary;
   font-weight: 700;
-  font-size: 16px; 
+  font-size: $font-size-xl;
   color: rgba(34, 34, 34, 0.9);
-  margin-bottom: 20px;
+  margin-bottom: $gap-lg;
 }
 
 .links-list {
@@ -107,94 +101,94 @@
 }
 
 .links-list li {
-  margin-bottom: 16px;
+  margin-bottom: $gap-xxxxl;
 }
 
 .footer-link {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
-  font-size: 15px; 
+  font-size: 15px;
   color: rgba(34, 34, 34, 0.8);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all $transition-speed ease;
   display: inline-block;
 }
 
 .footer-link:hover {
-  color: #3315b5;
-  transform: translateX(5px);
+  color: $color-primary-hover;
+  transform: translateX($gap-xs);
 }
 
 .footer-bottom {
-  background-color: #ffffff;
-  padding: 20px 0;
+  background-color: $color-white;
+  padding: $gap-lg 0;
   border-top: 1px solid #e0e0e0;
 }
 
 .copyright {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-primary;
   font-weight: 300;
-  font-size: 14px;
-  color: #3f3f40;
+  font-size: $font-size-lg;
+  color: $color-dark-gray;
   text-align: center;
   margin: 0;
   opacity: 0.8;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $breakpoint-xl) {
   .container,
   .container-footer {
-    padding: 0 20px; 
+    padding: 0 $container-padding-lg;
   }
   
   .footer-links-grid {
-    gap: 60px;
+    gap: $gap-xxxxxxl;
   }
   
   .footer-content {
-    gap: 60px;
+    gap: $gap-xxxxxxl;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-lg) {
   .footer-content {
     flex-direction: column;
-    gap: 50px;
+    gap: $gap-xxxxxl;
   }
   
   .footer-brand {
     max-width: 100%;
-    text-align: left; 
+    text-align: left;
   }
   
   .footer-links-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: $gap-xxxxl;
     width: 100%;
   }
   
   .social-links {
-    justify-content: flex-start; 
+    justify-content: flex-start;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .container,
   .container-footer {
-    padding: 0 20px;
+    padding: 0 $container-padding-lg;
   }
   
   .footer-main {
-    padding: 40px 0;
+    padding: $gap-xxxxl 0;
   }
   
   .footer-links-grid {
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 40px 60px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap-xxxxl $gap-xxxxxxl;
   }
   
   .footer-content {
-    gap: 40px;
+    gap: $gap-xxxxl;
   }
   
   .footer-brand {
@@ -207,17 +201,17 @@
   }
 
   .brand-description {
-    font-size: 13px;
-    margin-bottom: 30px;
+    font-size: $font-size-md;
+    margin-bottom: $gap-xxl;
   }
   
   .column-title {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: $font-size-xl;
+    margin-bottom: $gap-lg;
   }
   
   .footer-link {
-    font-size: 14px;
+    font-size: $font-size-lg;
   }
   
   .social-link {
@@ -226,36 +220,36 @@
   }
   
   .social-icon {
-    font-size: 16px;
+    font-size: $font-size-xl;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $breakpoint-sm) {
   .container,
   .container-footer {
-    padding: 0 15px; 
+    padding: 0 $container-padding-sm;
   }
   
   .footer-main {
-    padding: 30px 0;
+    padding: $gap-xxl 0;
   }
   
   .footer-bottom {
-    padding: 15px 0;
+    padding: $gap-lg 0;
   }
   
   .footer-links-grid {
-    grid-template-columns: 1fr; 
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: $gap-xxl;
   }
   
   .footer-brand {
-    text-align: center; 
+    text-align: center;
   }
   
   .social-links {
     justify-content: center;
-    gap: 20px;
+    gap: $gap-lg;
   }
   
   .footer-column {
@@ -264,13 +258,13 @@
   
   .brand-description {
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 12px;
+    margin-bottom: $gap-xxxxxl;
+    font-size: $font-size-sm;
   }
   
   .copyright {
-    font-size: 12px;
-    padding: 0 10px;
+    font-size: $font-size-sm;
+    padding: 0 $gap-xs;
   }
   
   .footer-link:hover {
@@ -278,17 +272,17 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: $breakpoint-xs) {
   .footer-main {
-    padding: 25px 0;
+    padding: $gap-xxxxxl 0;
   }
   
   .footer-content {
-    gap: 30px;
+    gap: $gap-xxl;
   }
   
   .social-links {
-    gap: 15px;
+    gap: $gap-lg;
   }
   
   .social-link {
@@ -297,19 +291,19 @@
   }
   
   .social-icon {
-    font-size: 14px;
+    font-size: $font-size-lg;
   }
   
   .column-title {
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: $font-size-lg;
+    margin-bottom: $gap-lg;
   }
   
   .footer-link {
-    font-size: 13px;
+    font-size: $font-size-md;
   }
   
   .links-list li {
-    margin-bottom: 12px;
+    margin-bottom: $gap-sm;
   }
 }

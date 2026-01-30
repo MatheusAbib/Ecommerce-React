@@ -1,54 +1,65 @@
+@import '../../styles/variables';
+
 .brands-section {
-  padding: 90px 0 0;
-  background-color: #ffffff;
+  padding: $brands-padding-top 0 0;
+  background-color: $color-white;
 }
 
 .container-brands {
-  max-width: 1600px;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 47px;
+  padding: 0 $container-padding-xl;
 }
 
 .brands-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family-primary;
   font-weight: 700;
-  font-size: 30px;
-  color: #3315b5;
+  font-size: $font-size-title-lg;
+  color: $color-primary-hover;
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: $brands-title-margin;
 }
 
 .brands-grid {
   display: flex;
   justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
+  gap: $gap-brand-grid;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: $gap-xs 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.brands-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .brand-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0; 
+  gap: 0;
   flex: 0 0 auto;
+  min-width: calc(20% - $gap-xxxxl);
 }
 
 .brand-circle {
-  width: 211px;
-  height: 211px;
-  background-color: #ffffff;
+  width: $brand-circle-size;
+  height: $brand-circle-size;
+  background-color: $color-white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.13);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 30px;
+  box-shadow: 0 $gap-xs $gap-lg $color-shadow-dark;
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+  padding: $brand-circle-padding;
 }
 
 .brand-circle:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-$gap-xs);
+  box-shadow: 0 $gap-sm $gap-xxxxl $shadow-medium;
 }
 
 .brand-logo {
@@ -63,142 +74,304 @@
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
-  transition: filter 0.3s ease;
+  transition: filter $transition-speed ease;
 }
 
+@media (min-width: $breakpoint-xxxl) {
+  .brands-grid {
+    gap: $gap-xxxxxxxl;
+  }
+  
+  .brand-circle {
+    width: $brand-circle-size-1920;
+    height: $brand-circle-size-1920;
+    padding: $brand-circle-padding-1920;
+  }
+  
+  .brands-title {
+    font-size: $font-size-title-xl;
+    margin-bottom: $brands-title-margin-1920;
+  }
+}
 
-@media (max-width: 1200px) {
+@media (min-width: $breakpoint-xxl) and (max-width: $breakpoint-xxxl) {
   .container-brands {
-    padding: 0 20px;
+    padding: 0 calc((100vw - $container-max-width) / 2);
   }
   
   .brands-grid {
-    gap: 30px;
+    gap: $gap-xxxxxxl;
+  }
+  
+  .brand-circle {
+    width: $brand-circle-size-xxl;
+    height: $brand-circle-size-xxl;
+    padding: $brand-circle-padding-xxl;
+  }
+}
+
+@media (max-width: $breakpoint-xl) {
+  .container-brands {
+    padding: 0 $container-padding-lg;
+  }
+  
+  .brands-grid {
+    gap: $gap-xxxxl;
   }
   
   .brand-circle {
     width: 180px;
     height: 180px;
-    padding: 25px;
+    padding: $gap-xxl;
   }
 }
 
-@media (max-width: 992px) {
+@media (min-width: $breakpoint-lg) {
+  .brands-grid {
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+  
+  .brand-card {
+    flex: 1;
+    max-width: calc(20% - $gap-xxxxl);
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
   .brands-section {
-    padding: 60px 0;
+    padding: $brands-padding-top-lg 0;
   }
   
   .brands-grid {
-    gap: 40px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: space-around;
+  }
+  
+  .brand-card {
+    min-width: calc(33.33% - $gap-xxl);
   }
   
   .brand-circle {
-    width: 160px;
-    height: 160px;
-    padding: 22px;
+    width: $brand-circle-size-lg;
+    height: $brand-circle-size-lg;
+    padding: $brand-circle-padding-lg;
   }
   
   .brands-title {
-    font-size: 28px;
-    margin-bottom: 50px;
+    font-size: $font-size-xxxxxxl;
+    margin-bottom: $brands-title-margin-lg;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .container-brands {
-    padding: 0 20px;
+    padding: 0 $container-padding-lg;
   }
   
   .brands-section {
-    padding: 50px 0;
+    padding: $brands-padding-top-md 0;
+  }
+
+  .brand-card {
+    min-width: calc(50% - $gap-lg);
   }
   
   .brands-grid {
-    gap: 30px;
+    gap: $gap-xxxl;
     justify-content: space-around;
   }
   
   .brand-circle {
-    width: 140px;
-    height: 140px;
-    padding: 20px;
+    width: $brand-circle-size-md;
+    height: $brand-circle-size-md;
+    padding: $brand-circle-padding-md;
   }
   
   .brands-title {
-    font-size: 26px;
-    margin-bottom: 40px;
+    font-size: $font-size-xxxxxl;
+    margin-bottom: $brands-title-margin-md;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $breakpoint-sm) {
   .container-brands {
-    padding: 0 15px;
+    padding: 0 $container-padding-sm;
   }
   
   .brands-section {
-    padding: 40px 0;
+    padding: $brands-padding-top-sm 0;
   }
   
   .brands-grid {
-    gap: 25px;
-    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: $gap-xxl;
   }
   
+  .brand-card {
+    min-width: auto;
+    width: 100%;
+    max-width: 200px;
+  }
+
   .brand-circle {
-    width: 120px;
-    height: 120px;
-    padding: 18px;
+    width: $brand-circle-size-sm;
+    height: $brand-circle-size-sm;
+    padding: $brand-circle-padding-sm;
   }
   
   .brands-title {
-    font-size: 24px;
-    margin-bottom: 35px;
+    font-size: $font-size-xxxxl;
+    margin-bottom: $brands-title-margin-sm;
   }
 }
 
 @media (max-width: 480px) {
   .brands-grid {
-    gap: 20px;
-    justify-content: center;
+    gap: $gap-xxxxxl;
   }
   
   .brand-circle {
-    width: 110px;
-    height: 110px;
-    padding: 16px;
+    width: $brand-circle-size-xs;
+    height: $brand-circle-size-xs;
+    padding: $brand-circle-padding-xs;
   }
   
   .brands-title {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: $font-size-xxxl;
+    margin-bottom: $brands-title-margin-xs;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: $breakpoint-xs) {
+  .brands-section {
+    padding: $brands-padding-top-sm 0;
+  }
+  
   .brands-grid {
-    gap: 15px;
+    gap: $gap-xxxxl;
+  }
+  
+  .brand-circle {
+    width: $brand-circle-size-xxs;
+    height: $brand-circle-size-xxs;
+    padding: $brand-circle-padding-xxs;
+  }
+  
+  .brands-title {
+    font-size: $font-size-xxl;
+  }
+}
+
+@media (max-width: 360px) {
+  .brands-grid {
+    gap: $gap-lg;
+  }
+  
+  .brand-circle {
+    width: 90px;
+    height: 90px;
+    padding: $gap-sm;
+  }
+  
+  .brands-title {
+    font-size: $font-size-xl;
+    margin-bottom: $gap-xxxxxl;
+  }
+}
+
+@media (max-width: 320px) {
+  .brands-section {
+    padding: $gap-xxxxl 0;
+  }
+  
+  .brands-grid {
+    gap: $gap-xs;
+  }
+  
+  .brand-circle {
+    width: 85px;
+    height: 85px;
+    padding: $gap-xs;
+  }
+  
+  .brands-title {
+    font-size: $font-size-lg;
+    margin-bottom: $gap-lg;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .brands-section {
+    padding: $gap-xxxxl 0;
+  }
+  
+  .brands-grid {
+    gap: $gap-lg;
+    margin-bottom: $gap-xxl;
   }
   
   .brand-circle {
     width: 100px;
     height: 100px;
-    padding: 14px;
+    padding: $gap-lg;
   }
   
   .brands-title {
-    font-size: 20px;
+    font-size: $font-size-xxxl;
+    margin-bottom: $gap-xxxxxl;
   }
 }
 
-@media (min-width: 1600px) {
+@media (orientation: landscape) and (max-height: 500px) {
+  .brands-section {
+    padding: $gap-xxl 0;
+  }
+  
   .brands-grid {
-    gap: 60px;
+    gap: $gap-sm;
+    margin-bottom: $gap-xxxxxl;
   }
   
   .brand-circle {
-    width: 230px;
-    height: 230px;
-    padding: 35px;
+    width: 90px;
+    height: 90px;
+    padding: $gap-sm;
   }
+  
+  .brands-title {
+    font-size: $font-size-xxl;
+    margin-bottom: $gap-lg;
+  }
+}
+
+@media (min-width: $breakpoint-xxl) {
+  .brand-card {
+    max-width: calc(20% - $gap-xxxxxl);
+  }
+}
+
+@media (min-width: $breakpoint-lg) and (max-width: 1400px) {
+  .brand-card {
+    min-width: 180px;
+  }
+}
+
+.brand-circle {
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-circle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, transparent 30%, rgba(255,255,255,0.1) 100%);
+  pointer-events: none;
 }

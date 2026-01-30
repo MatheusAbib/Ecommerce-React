@@ -1,33 +1,168 @@
-﻿// Cores
-$primary-color: #2A5CAA;
-$secondary-color: #F7CA11;
-$success-color: #27AE60;
-$danger-color: #E74C3C;
-$warning-color: #F39C12;
+﻿// ============== CORES ==============
+$color-white: #ffffff;
+$color-black: #000000;
+$color-light-gray: #f6f5f2;
+$color-gray: #9f9f9f;
+$color-dark-gray: #3f3f40;
+$color-border-gray: #eee;
+$color-primary: #3019B2;
+$color-primary-hover: #3315b5;
+$color-accent: #f7ca11;
+$color-accent-hover: #ffd43b;
+$color-accent-dark: #271c47;
+$color-shadow-light: rgba(0, 0, 0, 0.1);
+$color-shadow-medium: rgba(0, 0, 0, 0.12);
+$color-shadow-dark: rgba(0, 0, 0, 0.13);
+$color-shadow-hover: rgba(0, 0, 0, 0.2);
+$color-shadow-primary: rgba(51, 21, 181, 0.1);
 
-$text-dark: #333333;
-$text-medium: #666666;
-$text-light: #999999;
+$font-family-primary: 'Poppins', sans-serif;
 
-$bg-light: #F5F5F5;
-$bg-lighter: #FAFAFA;
+// Tamanhos de fonte
+$font-size-xxs: 9px;
+$font-size-xs: 11px;
+$font-size-sm: 12px;
+$font-size-md: 13px;
+$font-size-lg: 14px;
+$font-size-xl: 16px;
+$font-size-xxl: 20px;
+$font-size-xxxl: 22px;
+$font-size-xxxxl: 24px;
+$font-size-xxxxxl: 26px;
+$font-size-xxxxxxl: 28px;
+$font-size-hero-sm: 28px;
+$font-size-hero-md: 32px;
+$font-size-hero-lg: 42px;
+$font-size-hero-xl: 48px;
+$font-size-title-sm: 20px;
+$font-size-title-md: 26px;
+$font-size-title-lg: 30px;
+$font-size-title-xl: 34px;
 
-$border-color: #DDDDDD;
+// Breakpoints
+$breakpoint-xs: 400px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+$breakpoint-xxxl: 1920px;
 
-$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+// Container
+$container-max-width: 1600px;
+$container-padding-xl: 47px;
+$container-padding-lg: 20px;
+$container-padding-md: 20px;
+$container-padding-sm: 15px;
+$container-padding-xs: 15px;
 
-$spacing-xs: 4px;
-$spacing-sm: 8px;
-$spacing-md: 16px;
-$spacing-lg: 24px;
-$spacing-xl: 32px;
+// Gaps genéricos
+$gap-xxs: 8px;
+$gap-xs: 10px;
+$gap-sm: 12px;
+$gap-md: 15px;
+$gap-lg: 20px;
+$gap-xl: 25px;
+$gap-xxl: 30px;
+$gap-xxxl: 35px;
+$gap-xxxxl: 40px;
+$gap-xxxxxl: 50px;
+$gap-xxxxxxl: 60px;
+$gap-xxxxxxxl: 70px;
+$gap-xxxxxxxxl: 91px;
+$gap-xxxxxxxxxl: 120px;
 
-$border-radius-sm: 4px;
-$border-radius-md: 8px;
-$border-radius-lg: 12px;
+// Gaps específicos por componente
+$gap-info: 120px;
+$gap-info-lg: 60px;
+$gap-nav: 91px;
+$gap-nav-lg: 40px;
+$gap-actions: 35px;
+$gap-actions-lg: 25px;
+$gap-brand-grid: 20px;
+$gap-brand-grid-lg: 40px;
 
-$transition-fast: 0.2s ease;
-$transition-medium: 0.3s ease;
-$transition-slow: 0.5s ease;
+// Padding de headers
+$header-padding-top-sm: 10px;
+$header-padding-main: 20px;
+$header-padding-nav: 15px;
+
+// Alturas
+$search-height: 48px;
+$search-height-sm: 42px;
+$search-height-mobile: 44px;
+$button-height: 50px;
+$button-height-md: 45px;
+$button-height-sm: 40px;
+$button-min-width: 32px;
+$button-min-width-sm: 28px;
+
+// Hero Banner
+$hero-height: 570px;
+$hero-height-lg: 450px;
+$hero-height-md: 400px;
+$hero-height-sm: 350px;
+$hero-padding-top: 170px;
+$hero-padding-top-lg: 120px;
+$hero-padding-top-md: 100px;
+$hero-padding-top-sm: 80px;
+
+$hero-title-width: 822px;
+$hero-title-width-lg: 700px;
+$hero-subtitle-width: 370px;
+
+$hero-button-width: 206px;
+$hero-button-width-md: 180px;
+$hero-button-width-sm: 160px;
+
+// Brands Section
+$brands-padding-top: 90px;
+$brands-padding-top-lg: 60px;
+$brands-padding-top-md: 50px;
+$brands-padding-top-sm: 40px;
+
+$brands-title-margin: 44px;
+$brands-title-margin-lg: 50px;
+$brands-title-margin-md: 40px;
+$brands-title-margin-sm: 35px;
+$brands-title-margin-xs: 30px;
+$brands-title-margin-1920: 60px;
+
+$brand-circle-size: 180px;
+$brand-circle-size-lg: 160px;
+$brand-circle-size-md: 140px;
+$brand-circle-size-sm: 120px;
+$brand-circle-size-xs: 110px;
+$brand-circle-size-xxs: 100px;
+$brand-circle-size-xxl: 230px;
+$brand-circle-size-1920: 250px;
+
+$brand-circle-padding: 30px;
+$brand-circle-padding-lg: 22px;
+$brand-circle-padding-md: 20px;
+$brand-circle-padding-sm: 18px;
+$brand-circle-padding-xs: 16px;
+$brand-circle-padding-xxs: 14px;
+$brand-circle-padding-xxl: 35px;
+$brand-circle-padding-1920: 40px;
+
+// Cart
+$cart-count-size: 18px;
+$cart-count-size-sm: 16px;
+$cart-count-size-mobile: 20px;
+
+// Mobile Menu
+$hamburger-width: 24px;
+$hamburger-height: 2px;
+$hamburger-spacing: 5px;
+$mobile-menu-padding: 20px;
+$mobile-action-button-padding: 12px;
+$mobile-action-button-gap: 10px;
+
+$transition-speed: 0.3s;
+$hero-bg-hover-scale: 135%;
+
+// ============== SOMBRAS ==============
+$shadow-light: 0 10px 30px rgba(0, 0, 0, 0.15);
+$shadow-medium: rgba(0, 0, 0, 0.2);
+$shadow-dark: rgba(0, 0, 0, 0.4);

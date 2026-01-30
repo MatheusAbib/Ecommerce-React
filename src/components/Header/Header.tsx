@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className="header">
       <div className="header-top">
         <div className="container-header">
           <div className="header-info">
             <div className="info-item">
-                <img src="/images/ShieldCheck.svg" alt="Shield" className="shield-icon" />
+              <img src="/images/ShieldCheck.svg" alt="Shield" className="shield-icon" />
               <span>Compra <a>100% segura</a></span>
             </div>
             <div className="info-item">
-                <img src="/images/Truck.svg" alt="Entrega" className="truck-icon" />
+              <img src="/images/Truck.svg" alt="Entrega" className="truck-icon" />
               <span><a>Frete grátis</a> acima de R$ 200</span>
             </div>
             <div className="info-item">
-                <img src="/images/CreditCard.svg" alt="Cartão" className="card-icon" />
+              <img src="/images/CreditCard.svg" alt="Cartão" className="card-icon" />
               <span><a>Parcele</a> suas compras</span>
             </div>
           </div>
@@ -27,12 +33,22 @@ const Header = () => {
         <div className="container-header">
           <div className="header-content">
             <div className="logo">
-        <img 
-          src="/images/Logo.svg" 
-          alt="Econverse" 
-          className="logo-image" 
-        />
+              <img 
+                src="/images/Logo.svg" 
+                alt="Econverse" 
+                className="logo-image" 
+              />
             </div>
+            
+            <button 
+              className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`} 
+              onClick={toggleMenu}
+              aria-label="Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
             
             <div className="search-bar">
               <input 
@@ -64,7 +80,7 @@ const Header = () => {
         </div>
       </div>
       
-      <nav className="header-nav">
+      <nav className={`header-nav ${isMenuOpen ? 'mobile-open' : ''}`}>
         <div className="container-header">
           <ul className="nav-menu">
             <li><a href="#" className="nav-link active">TODAS AS CATEGORIAS</a></li>
@@ -80,6 +96,41 @@ const Header = () => {
           </ul>
         </div>
       </nav>
+      
+      <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-menu-content">
+          <div className="mobile-search-bar">
+            <input 
+              type="text" 
+              placeholder="O que você está buscando?" 
+              className="mobile-search-input"
+            />
+            <button className="mobile-search-button">
+              <img src="/images/Lupa.svg" alt="Lupa" className="Lupa-icon" />
+            </button>
+          </div>
+          
+          <div className="mobile-actions">
+            <button className="mobile-action-button">
+              <img src="/images/Group.svg" alt="Caixa" className="box-icon" />
+              <span>Meus Pedidos</span>
+            </button>
+            <button className="mobile-action-button">
+              <img src="/images/UserCircle.svg" alt="User" className="user-icon" />
+              <span>Minha Conta</span>
+            </button>
+            <button className="mobile-action-button">
+              <img src="/images/Heart.svg" alt="Favorito" className="heart-icon" />
+              <span>Favoritos</span>
+            </button>
+            <button className="mobile-action-button cart-button">
+              <img src="/images/ShoppingCart.svg" alt="Carrinho" className="cart-icon" />
+              <span>Carrinho</span>
+              <span className="mobile-cart-count">2</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

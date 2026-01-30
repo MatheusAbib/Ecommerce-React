@@ -1,18 +1,20 @@
+@import '../../styles/variables';
+
 .categories-section {
-  padding: 60px 0 0;
-  background-color: #ffffff;
+  padding: $gap-xxxxxxl 0 0;
+  background-color: $color-white;
 }
 
 .categories-container {
-  max-width: 1600px;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 47px;
+  padding: 0 $container-padding-xl;
 }
 
 .main-categories {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: $gap-xxxxl;
   flex-wrap: wrap;
 }
 
@@ -20,35 +22,33 @@
   width: 140px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all $transition-speed ease;
   position: relative;
 }
 
 .category-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-$gap-md);
 }
 
 .category-card.active .category-icon {
-  background: #ffffff;
+  background: $color-white;
 }
-
 
 .category-icon {
   width: 128px;
   height: 128px;
   background: #f4f4f4;
-  border-radius: 10px;
+  border-radius: $gap-xs;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 22px;
-  font-size: 60px;
-  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.13);
+  margin: 0 auto $gap-xxxl;
+  font-size: $gap-xxxxxxl;
+  box-shadow: 0 $gap-xs 11px $color-shadow-light;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
 }
-
 
 .category-icon img {
   width: 63px;
@@ -77,11 +77,11 @@
 }
 
 .category-name {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-family: $font-family-primary;
+  font-size: $font-size-lg;
   font-weight: 500;
   color: #4d4d4d;
-  transition: all 0.3s ease;
+  transition: all $transition-speed ease;
   position: relative;
   display: inline-block;
   padding: 2px 5px;
@@ -89,23 +89,23 @@
 }
 
 .category-card:hover .category-name {
-  color: #3019b2;
+  color: $color-primary;
   font-weight: 600;
   transform: scale(1.05);
 }
 
 .category-card.active .category-name {
-  color: #3019b2;
+  color: $color-primary;
   font-weight: 700;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $breakpoint-xl) {
   .categories-container {
-    padding: 0 20px;
+    padding: 0 $container-padding-lg;
   }
   
   .main-categories {
-    gap: 30px;
+    gap: $gap-xxl;
   }
   
   .category-card {
@@ -115,13 +115,13 @@
   .category-icon {
     width: 110px;
     height: 110px;
-    font-size: 50px;
+    font-size: $gap-xxxxxl;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $breakpoint-lg) {
   .main-categories {
-    gap: 25px;
+    gap: $gap-xxxxxl;
   }
   
   .category-card {
@@ -131,7 +131,7 @@
   .category-icon {
     width: 100px;
     height: 100px;
-    font-size: 45px;
+    font-size: $gap-xxxxl;
   }
   
   .category-icon img {
@@ -140,9 +140,9 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $breakpoint-md) {
   .main-categories {
-    gap: 20px;
+    gap: $gap-lg;
   }
   
   .category-card {
@@ -152,7 +152,7 @@
   .category-icon {
     width: 90px;
     height: 90px;
-    font-size: 40px;
+    font-size: $gap-xxxxl;
   }
   
   .category-icon img {
@@ -161,17 +161,17 @@
   }
   
   .category-name {
-    font-size: 13px;
+    font-size: $font-size-md;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $breakpoint-sm) {
   .categories-container {
-    padding: 0 15px;
+    padding: 0 $container-padding-sm;
   }
   
   .main-categories {
-    gap: 15px;
+    gap: $gap-lg;
   }
   
   .category-card {
@@ -181,8 +181,8 @@
   .category-icon {
     width: 75px;
     height: 75px;
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: $gap-xxxl;
+    margin-bottom: $gap-lg;
   }
   
   .category-icon img {
@@ -191,7 +191,7 @@
   }
   
   .category-name {
-    font-size: 11px;
+    font-size: $font-size-xs;
   }
   
   .category-card::before {
@@ -199,9 +199,9 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: $breakpoint-xs) {
   .main-categories {
-    gap: 12px;
+    gap: $gap-sm;
   }
   
   .category-card {
@@ -211,7 +211,7 @@
   .category-icon {
     width: 65px;
     height: 65px;
-    font-size: 30px;
+    font-size: $gap-xxl;
   }
   
   .category-icon img {
@@ -220,6 +220,6 @@
   }
   
   .category-name {
-    font-size: 10px;
+    font-size: $font-size-xxs;
   }
 }
