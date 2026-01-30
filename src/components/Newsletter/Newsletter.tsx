@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import './Newsletter.css';
+﻿import React, { useState } from 'react';
+import './Newsletter.scss';
+
+interface FormData {
+  name: string;
+  email: string;
+  acceptTerms: boolean;
+}
 
 const Newsletter = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     acceptTerms: false
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -16,7 +22,7 @@ const Newsletter = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form data:', formData);
     // Aqui você implementaria a lógica de envio para a API
@@ -34,7 +40,7 @@ const Newsletter = () => {
               Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.
             </p>
           </div>
-          
+
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
@@ -50,7 +56,7 @@ const Newsletter = () => {
                   required
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="email" className="form-label">E-mail</label>
                 <input
@@ -64,12 +70,12 @@ const Newsletter = () => {
                   required
                 />
               </div>
-              
+
               <button type="submit" className="newsletter-button btn-secondary">
                 INSCREVER
               </button>
             </div>
-            
+
             <div className="form-checkbox">
               <input
                 type="checkbox"

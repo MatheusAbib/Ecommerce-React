@@ -1,13 +1,6 @@
-
-.hero-banner {
+﻿.hero-banner {
   position: relative;
   height: 570px;
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url('/public/images/black-friday.png');
-  background-size: 130%; 
-  background-position: center;
-  background-repeat: no-repeat;
   padding-top: 170px;
   transition: background-size 0.5s ease;
 }
@@ -29,7 +22,7 @@
 
 .hero-title {
   width: 822px;
-  height: 128px; 
+  height: 128px;
   opacity: 1;
   font-family: 'Poppins', sans-serif;
   color: white;
@@ -47,8 +40,8 @@
 
 .hero-subtitle {
   width: 370px;
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
   color: white;
   opacity: 1;
   font-family: 'Poppins', sans-serif;
@@ -127,7 +120,6 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 1200px) {
   .hero-title {
     width: 700px;
@@ -141,13 +133,13 @@
     height: 450px;
     padding-top: 120px;
   }
-  
+
   .hero-title {
     width: 100%;
     font-size: 38px;
     line-height: 42px;
   }
-  
+
   .hero-subtitle {
     width: 100%;
     font-size: 28px;
@@ -158,18 +150,17 @@
   .hero-banner {
     height: 400px;
     padding-top: 100px;
-    background-size: cover; 
   }
-  
+
   .hero-title {
     font-size: 32px;
     line-height: 36px;
   }
-  
+
   .hero-subtitle {
     font-size: 24px;
   }
-  
+
   .hero-button {
     width: 180px;
     height: 45px;
@@ -183,18 +174,18 @@
     height: 350px;
     padding-top: 80px;
   }
-  
+
   .hero-title {
     font-size: 28px;
     line-height: 32px;
     margin-bottom: 15px;
   }
-  
+
   .hero-subtitle {
     font-size: 20px;
     margin-bottom: 25px;
   }
-  
+
   .hero-button {
     width: 160px;
     height: 40px;
@@ -204,21 +195,21 @@
   }
 }
 
-@media (max-width: 400px) {  
+@media (max-width: 400px) {
   .hero-banner {
     height: 300px;
     padding-top: 60px;
   }
-  
+
   .hero-title {
     font-size: 24px;
     line-height: 28px;
   }
-  
+
   .hero-subtitle {
     font-size: 18px;
   }
-  
+
   .hero-button {
     width: 140px;
     padding: 7px 20px;

@@ -1,9 +1,17 @@
-import React from 'react';
-import './HeroBanner.css';
+﻿import React from 'react';
+import './HeroBanner.scss';
 
 const HeroBanner = () => {
   return (
-    <section className="hero-banner">
+    <section 
+      className="hero-banner" 
+      style={{
+        background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/images/black-friday.png")`,
+        backgroundSize: '130%',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="hero-overlay"></div>
       <div className="container-banner">
         <div className="hero-content">

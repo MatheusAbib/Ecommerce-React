@@ -1,5 +1,5 @@
-import React from 'react';
-import './Brands.css';
+﻿import React from 'react';
+import './Brands.scss';
 
 const Brands = () => {
   const brands = [
@@ -23,10 +23,11 @@ const Brands = () => {
                     src={brand.logo} 
                     alt="Logo da marca"
                     className="brand-logo-image"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "https://via.placeholder.com/100x30?text=Logo";
-                    }}
+                      onError={(e) => {
+                        const img = e.currentTarget as HTMLImageElement;
+                        img.onerror = null;
+                        img.src = "https://via.placeholder.com/100x30?text=Logo";
+                      }}
                   />
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/main.css';
-import './styles/components.css';
+import './styles/main.scss';
+import './styles/components.scss';
 
 import Header from './components/Header/Header';
 import HeroBanner from './components/HeroBanner/HeroBanner';
