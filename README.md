@@ -36,7 +36,7 @@ git clone https://github.com/MatheusAbib/Ecommerce-React.git
 cd Ecommerce-React
 
 3. Instale as dependências:
-npm install
+npm install --force
 
 4. Execute o projeto:
 npm start
