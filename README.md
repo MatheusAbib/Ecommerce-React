@@ -28,84 +28,55 @@ Projeto desenvolvido em **React + TypeScript** para exibição de uma vitrine de
 
 ### Passo a Passo
 
-1. Clone o repositório:
 ```bash
+1. Clone o repositório:
 git clone https://github.com/MatheusAbib/Ecommerce-React.git
+
+2. Entre em:
 cd Ecommerce-React
 
-Instale as dependências
+3. Instale as dependências:
 npm install
 
-
-Execute o projeto:
-
+4. Execute o projeto:
 npm start
 
 
 O projeto estará disponível em:
-
 http://localhost:3000
+```
 
-✅ Requisitos Atendidos
-Requisito	Status	Observação
-React + TypeScript	✅	Projeto 100% em TypeScript
-Consumo de JSON	✅	Implementado com Fetch API
-Layout conforme Figma	✅	Pixel perfect
-Modal de produto	✅	Completo com informações
-Pré-processador CSS	✅	SCSS em todos os componentes
-Sem bibliotecas UI	✅	Estilização com CSS puro / SCSS
-SEO	✅	HTML semântico e meta tags
-Responsivo	✅	Mobile-first
-Componentização	✅	Estrutura modular
-🔧 Solução técnica para consumo da API (CORS)
-Problema
+### ✅ Requisitos Atendidos
+- Requisito	Status	Observação
+- React + TypeScript	✅	Projeto 100% em TypeScript
+- Consumo de JSON	✅	Implementado com Fetch API
+- Layout conforme Figma	✅	Pixel perfect
+- Modal de produto	✅	Completo com informações
+- Pré-processador CSS	✅	SCSS em todos os componentes
+- Sem bibliotecas UI	✅	Estilização com CSS puro / SCSS
+- SEO	✅	HTML semântico e meta tags
+- Componentização	✅	Estrutura modular
 
-A API fornecida (https://app.econverse.com.br/...) não permite acesso direto a partir do localhost devido a políticas de CORS.
+## 🔧 Solução Técnica para CORS
 
-Solução implementada
+### ⚠️ Problema Encontrado
+A API fornecida (`https://app.econverse.com.br/...`) bloqueia requisições diretas do `localhost:3000` devido a políticas de CORS (Cross-Origin Resource Sharing).
 
+# Solução implementada
 Para ambiente de desenvolvimento, o JSON da API foi baixado e incluído em:
-
 /public/produtos.json
 
-
 O serviço de API (api.ts) foi implementado de forma adaptativa:
-
 Em desenvolvimento: utiliza o arquivo local
 
 Em produção: utiliza a URL original da API
-
 Toda a lógica de:
-
-Fetch
-
-Tratamento de erros
-
-Tipagem com TypeScript
+ - Fetch
+ - Tratamento de erros
+ - Tipagem com TypeScript
 foi implementada como se estivesse consumindo a API real.
 
-Como testar com a URL real
-
-Remova o arquivo:
-
-public/produtos.json
-
-
-O código tentará acessar a URL original
-
-Para funcionar corretamente, é necessário um servidor com CORS configurado
-
-📝 Próximas melhorias
-
-Implementação de testes unitários
-
-Melhorias de performance
-
-Refinamentos visuais no modal
-
-📧 Contato
-
-Matheus Bilitardo Abib
-GitHub: https://github.com/MatheusAbib
-
-LinkedIn: https://www.linkedin.com/in/matheus-abib
+### 📧 Contato
+- Matheus Bilitardo Abib
+- GitHub: https://github.com/MatheusAbib
+- LinkedIn:[ https://www.linkedin.com/in/matheus-abib](https://www.linkedin.com/in/matheusabib/)
