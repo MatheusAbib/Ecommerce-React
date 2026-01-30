@@ -47,7 +47,6 @@ http://localhost:3000
 ```
 
 ### ✅ Requisitos Atendidos
-- Requisito	Status	Observação
 - React + TypeScript	✅	Projeto 100% em TypeScript
 - Consumo de JSON	✅	Implementado com Fetch API
 - Layout conforme Figma	✅	Pixel perfect
