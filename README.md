@@ -1,7 +1,7 @@
 # Teste Econverse - Desenvolvedor Front-End
 
 ## 📋 Sobre o Projeto
-Projeto desenvolvido em **React + TypeScript** para exibição de uma vitrine de produtos, consumindo dados via API, conforme layout fornecido no Figma. O foco foi criar uma aplicação moderna, responsiva, componentizada e com boa organização de código.
+Projeto desenvolvido em **React + TypeScript** para exibição de uma vitrine de produtos, consumindo dados via API em [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json), conforme layout fornecido no [FIGMA](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). O foco foi criar uma aplicação moderna, responsiva, componentizada e com boa organização de código.
 
 ## ✨ Funcionalidades
 - Vitrine de produtos com consumo de API
